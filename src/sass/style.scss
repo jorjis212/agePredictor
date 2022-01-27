@@ -289,7 +289,7 @@ main {
           margin: 1rem 0;
         }
         &::before {
-          content: url("/src/assets/images/tick.svg");
+          content: url("../assets/images/tick.svg");
         }
       }
     }

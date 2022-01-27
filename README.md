@@ -13,7 +13,7 @@ git clone https://github.com/jorjis212/agePredictor.git
 [![Codepen][codepen-shield]][codepen-url]
 [![LinkedIn][linkedin-shield]][linkedin-url]
 
-![project Overview,](/src/assets/images/minimalisticMoc@HD.png)
+![project Overview,](./dist/assets/images/minimalisticMoc@HD.png)
 
 # Toggle the [project](https://predictmyage.netlify.app/ "predict my age") 👋
 

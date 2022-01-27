@@ -102,7 +102,7 @@ export function renderGraph(container, age, extender, limiterPrev = true, limite
 
     let icon = document.createElement('img');
     icon.setAttribute('class', 'graph__icon');
-    icon.setAttribute('src', '/src/assets/images/question.svg');
+    icon.setAttribute('src', './assets/images/question.svg');
     icon.setAttribute('alt', 'question mark');
     plot.append(icon);
 
@@ -163,7 +163,7 @@ export function generateImg(objBundle, imageHero) {
 
     const randomImage = obj[0];
 
-    const path = `/src/assets/images/imgSource/${randomImage}.webp`;
+    const path = `./assets/images/imgSource/${randomImage}.webp`;
     imageHero.src = path;
 
     const age = objBundle[category][randomImage];
