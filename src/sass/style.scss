@@ -54,12 +54,11 @@ input {
 span {
   display: inline-block;
 }
-.highlight {
+.highlight-text {
   background-color: inherit;
   -webkit-text-stroke: $text-color 0.5px;
   color: $accenttwo-color;
-  letter-spacing: -1px;
-  font-weight: 600;
+  font-weight: map-get($font-weights, semi-bold);
   font-size: 110%;
 }
 #my-canvas {
@@ -110,7 +109,6 @@ span {
   color: $accenttwo-color;
   font-weight: map-get($font-weights, semi-bold);
   font-size: 1.8rem;
-  letter-spacing: -1px;
   transition: box-shadow 0.2s ease-out;
   &:hover {
     box-shadow: 0 0 0 4px rgba(0, 0, 0, 0.3);
@@ -291,7 +289,7 @@ main {
           margin: 1rem 0;
         }
         &::before {
-          content: url("../images/tick.svg");
+          content: url("/src/assets/images/tick.svg");
         }
       }
     }
@@ -323,6 +321,7 @@ a {
     color: $accenttwo-color;
   }
 }
+
 footer {
   margin: 0 auto;
   margin-top: 3rem;
@@ -337,21 +336,28 @@ footer {
       justify-content: center;
       gap: 2%;
       letter-spacing: 0px;
-      transition: color 0.2s ease-in;
+      transition: all 0.2s ease-in;
       color: $accentone-color;
 
-      &:hover {
+      .icon {
+        transition: all 0.2s ease-in;
+      }
+
+      &:hover .icon {
+        transform: translateY(-10%);
+      }
+      &:hover .text {
         color: $accenttwo-color;
       }
       .text {
-        font-size: 1rem;
+        transition: all 0.2s ease-in;
+        font-size: 1.1rem;
       }
     }
     .iconNtext:not(:first-child) {
       margin-left: 1rem;
     }
   }
-
   .footer-text {
     margin-top: 1.2rem;
     display: flex;

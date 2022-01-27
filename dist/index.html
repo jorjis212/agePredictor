@@ -6,13 +6,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="keywords" content="cat,guess,squirrel,dog,puppy,prediction,hints,catphoto,log,age prediction" />
     <meta name="description" content="This site renders static games and evaluates scores and predictions at a time. " />
-    <meta property="og:title" content="Age Prediction" />
+    <meta property="og:title" content="Age Prediction || Guesser" />
     <meta
       property="og:description"
       content="Test your guess and prediction over different contexts. cheers 🍻."
     />
     <meta property="og:type" content="website" />
-    <meta property="og:url" content="https://backslashcloud.tech" />
+    <meta property="og:url" content="https://predictmyage.netlify.app" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -21,11 +21,13 @@
     />
     <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
     <title>Age Guesser || Predictor</title>
-    <link rel="icon" type="image/png" href="./dist/images/squirrel.png">
-    <link rel="stylesheet" href="./dist/styles/style.min.css" />
+    <link rel="icon" type="image/png" href="../src/assets/images/squirrel.png">
+    <link rel="stylesheet" href="./styles/style.min.css" />
   </head>
   <body>
     <canvas class="display-none"></canvas>
+
+    <!-- start header -->
     <header>
       <nav class="header__nav">
         <div>
@@ -38,15 +40,17 @@
         </ul>
       </nav>
     </header>
+
+    <!-- start main -->
     <main>
       <section class="section-content">
         <figure class="content-image">
           <h2 class="content-heading">
-            Guess my age in <mark class="highlight">months</mark> 🐹
+            Guess my age in <mark class="highlight-text">months</mark> 🐹
           </h2>
           <img
             class="heroimage"
-            src="./dist/images/squirel.jpg"
+            src="/src/assets/images/404.svg"
             alt="cute creature acting on web."
           />
           <div class="loadholder"><div class=""></div></div>
@@ -61,9 +65,9 @@
               min="4"
               max="20"
               placeholder="4 - 20"
-              tabindex="-2"
+              tabindex="-1"
             />
-            <button tabindex="-1" class="btn-check">Check 🍳</button>
+            <button tabindex="-2" class="btn-check">Check 🍳</button>
           </div>
           <div class="client__message">
             <span class="toBe-shown">Message:</span>
@@ -93,7 +97,7 @@
           <div class="collapsible">
             <div data-h="1" class="collapsible__header">
               <h2>Preview Hints - 1</h2>
-              <img src="./dist/images/chevron.svg" alt="an animated chevron." />
+              <img src="../src/assets/images/chevron.svg" alt="an animated chevron." />
             </div>
           </div>
           <div class="collapsible__content">
@@ -106,7 +110,7 @@
           <div class="collapsible">
             <div data-h="2" class="collapsible__header">
               <h2>Preview Hints - 2</h2>
-              <img src="./dist/images/chevron.svg" alt="an animated chevron." />
+              <img src="../src/assets/images/chevron.svg" alt="an animated chevron." />
             </div>
           </div>
           <div class="collapsible__content">
@@ -116,35 +120,34 @@
         </div>
       </section>
     </main>
+    <!-- footer section -->
     <footer>
       <div class="footer-icons">
-
         
-        <a class="iconNtext" href="#">
+        <a class="iconNtext" href="https://www.linkedin.com/in/jorjis-hasan-4163a81a4/" target="_blank" rel="nofollow">
           <i style="color:#EBA495" class="icon fab fa-linkedin fa-2x"></i>
           <span class="text">linkedin</span>
         </a>
         
-        <a class="iconNtext" href="#">
+        <a class="iconNtext" href="https://codepen.io/jorjis121" target="_blank" rel="nofollow">
           <i style="color:#fff" class="icon fab fa-codepen fa-2x"></i>
           <span class="text">codepen</span>
         </a>
-        <a class="iconNtext" href="#">
-          <i style= "color:#1BA94C;"class="icon fab fa-hackerrank fa-2x"></i>
+        <a class="iconNtext" href="https://www.hackerrank.com/_jorjis" target="_blank" rel="nofollow">
+          <i style= "color:#1BA94C; "class="icon fab fa-hackerrank fa-2x"></i>
           <span class="text">hackerrank</span>
         </a>
         
-        <a class="iconNtext" href="#">
+        <a class="iconNtext" href="https://github.com/jorjis212" target="_blank" rel="nofollow">
          <i style="color:#fff"  class="icon fab fa-github fa-2x"></i>
           <span class="text">github</span>
         </a>
 
       </div>
-      <div class="footer-text">Made from <span class="fp"><img src="./dist/images/footer-icons/heart.svg" alt=""></span> by jorjis, 2019-2022. </div>
+      <div class="footer-text">Made from <span class="fp"><img src="../src/assets/images/footer-icons/heart.svg" alt=""></span> by jorjis, 2019-2022. </div>
     </footer>
-    <script src="./dist/scripts/confetti.min.js"></script>
-    <script src="./dist/scripts/functions.js"></script>
-    <script src="./dist/scripts/object.js"></script>
-    <script src="./dist/scripts/app.js"></script>
+    <!-- scripting [jorjis hasan]-->
+    <script src="./ftp.min.js"></script>
+    <script src="./js/app.179.js"></script>
   </body>
 </html> 

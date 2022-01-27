@@ -1,14 +1,14 @@
 'use strict';
 
 //utilities function
-function randomMinToMax(min, max) {
+export function randomMinToMax(min, max) {
     return Math.floor(Math.random() * (max - min + 1) + min);
 }
 
 
 
 //shuffle
-function shuffle(array) {
+export function shuffle(array) {
     for (let i = array.length - 1; i > 0; i--) {
         let j = Math.floor(Math.random() * i);
         let k = array[i];
@@ -21,7 +21,7 @@ function shuffle(array) {
 
 
 //add class
-function addClass(element, className, duration) {
+export function addClass(element, className, duration) {
     element.classList.add(className);
     if (duration) {
         setTimeout(_ => element.classList.remove(className), duration);
@@ -30,7 +30,7 @@ function addClass(element, className, duration) {
 
 
 //confetti 
-function startConfetti(duration) {
+export function startConfetti(duration) {
     const bodyWidth = document.body.clientWidth;
     const canvasTag = document.querySelector('canvas');
     canvasTag.classList.remove('display-none');
@@ -79,7 +79,7 @@ function startConfetti(duration) {
 
 
 //graph
-function renderGraph(container, age, extender, limiterPrev = true, limiterNext = true, revealBtnId) {
+export function renderGraph(container, age, extender, limiterPrev = true, limiterNext = true, revealBtnId) {
 
     if (container.childNodes[1]) {
         container.removeChild(container.childNodes[1]);
@@ -102,7 +102,7 @@ function renderGraph(container, age, extender, limiterPrev = true, limiterNext =
 
     let icon = document.createElement('img');
     icon.setAttribute('class', 'graph__icon');
-    icon.setAttribute('src', './dist/images/question.svg');
+    icon.setAttribute('src', '/src/assets/images/question.svg');
     icon.setAttribute('alt', 'question mark');
     plot.append(icon);
 
@@ -140,7 +140,7 @@ function renderGraph(container, age, extender, limiterPrev = true, limiterNext =
 
 
 //heroimage loading
-function startLoader() {
+export function startLoader() {
     const loaderHolder = document.querySelector('.loadholder');
     loaderHolder.classList.add('cover');
     loaderHolder.childNodes[0].classList.add('lds-hourglass');
@@ -148,9 +148,24 @@ function startLoader() {
 
 }
 
-function afterLoad() {
+export function afterLoad() {
     const loaderHolder = document.querySelector('.loadholder');
     loaderHolder.classList.remove('cover');
     loaderHolder.childNodes[0].classList.remove('lds-hourglass');
 
+}
+
+
+//image generator
+export function generateImg(objBundle, imageHero) {
+    const category = Object.keys(objBundle).sort(() => Math.random() - 0.5)[0];
+    const obj = shuffle(Object.keys(objBundle[category]));
+
+    const randomImage = obj[0];
+
+    const path = `/src/assets/images/imgSource/${randomImage}.webp`;
+    imageHero.src = path;
+
+    const age = objBundle[category][randomImage];
+    return age;
 }

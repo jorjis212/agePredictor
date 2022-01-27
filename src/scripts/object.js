@@ -1,9 +1,4 @@
-'use strict';
-
-const imageHero = document.querySelector('.heroimage');
-
-
-const objBundle = {
+export const objBundle = {
     squirrel: {
         "squirrel-1": 10,
         "squirrel-2": 6,
@@ -22,10 +17,10 @@ const objBundle = {
         "cat-2": 8,
         "cat-3": 10,
         "cat-4": 5,
-        "cat-5": 7,
+        "cat-5": 17,
         "cat-6": 11,
         "cat-7": 12,
-        "cat-8": 4,
+        "cat-8": 18,
         "cat-9": 15,
         "cat-10": 13,
         "cat-11": 14,
@@ -41,27 +36,17 @@ const objBundle = {
         "puppy-3": 15,
         "puppy-4": 9,
 
+    },
+    baby: {
+        "baby-1": 6,
+        "baby-2": 8,
+        "baby-3": 16,
+        "baby-4": 13,
+        "baby-5": 7,
+        "baby-6": 11,
+        "baby-7": 5,
+        "baby-8": 4,
+        "baby-9": 5,
+        "baby-10": 19,
     }
-};
-
-
-function generateImg(objBundle) {
-    const category = Object.keys(objBundle).sort(() => Math.random() - 0.5)[0];
-    const obj = shuffle(Object.keys(objBundle[category]));
-
-    const randomImage = obj[0];
-
-    const path = `./dist/images/imgSource/${randomImage}.webp`;
-
-    imageHero.src = path;
-
-    const age = objBundle[category][randomImage];
-    return age;
-}
-
-let age = generateImg(objBundle);
-
-startLoader();
-imageHero.onload = function () {
-    afterLoad();
 };
