@@ -9,7 +9,7 @@ $desktop: 1024px;
     margin-bottom: 0;
     .scoreBoard li {
       line-height: 1.4;
-      font-size: 2.5rem;
+      font-size: 2rem;
     }
     .btn-playAgain {
       font-size: 2.8rem;
@@ -39,29 +39,29 @@ $desktop: 1024px;
 
 @media (min-width: $desktop) {
   .btn-check {
-    font-size: 3.2rem;
+    font-size: 3rem;
     padding: 1rem 1.5rem;
   }
 
   header {
     margin-bottom: 0;
     .scoreBoard li {
-      font-size: 2.8rem;
+      font-size: 2rem;
     }
     .btn-playAgain {
-      font-size: 2.6rem;
+      font-size: 2.5rem;
       padding: 1rem 3.5rem;
       letter-spacing: 0.1px;
     }
   }
   main {
     grid-template-columns: 1fr 1fr;
-    grid-column-gap: 5%;
+    grid-column-gap: 7%;
     .section-content {
       .content-image {
         .content-heading {
           text-align: center;
-          font-size: 3rem;
+          font-size: 2.5rem;
         }
       }
     }
@@ -72,7 +72,7 @@ $desktop: 1024px;
       }
       .hints-warning {
         .hints-text {
-          font-size: 2rem;
+          font-size: 1.5rem;
         }
       }
     }
